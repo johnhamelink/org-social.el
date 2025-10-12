@@ -46,16 +46,16 @@ Replaces *** and deeper headings with visual markers."
        (cond
         ;; Level 6 heading: ****** → ▸▸▸▸▸▸
         ((string-match "^\\(\\*\\{6,\\}\\) \\(.+\\)$" line)
-         (concat "▸▸▸▸▸▸ " (match-string 2 line)))
+         (concat "▸▸▸▸ " (match-string 2 line)))
         ;; Level 5 heading: ***** → ▸▸▸▸▸
         ((string-match "^\\(\\*\\{5\\}\\) \\(.+\\)$" line)
-         (concat "▸▸▸▸▸ " (match-string 2 line)))
+         (concat "▸▸▸ " (match-string 2 line)))
         ;; Level 4 heading: **** → ▸▸▸▸
         ((string-match "^\\(\\*\\{4\\}\\) \\(.+\\)$" line)
-         (concat "▸▸▸▸ " (match-string 2 line)))
+         (concat "▸▸ " (match-string 2 line)))
         ;; Level 3 heading: *** → ▸▸▸
         ((string-match "^\\(\\*\\{3\\}\\) \\(.+\\)$" line)
-         (concat "▸▸▸ " (match-string 2 line)))
+         (concat "▸ " (match-string 2 line)))
         ;; Default: return line as is
         (t line)))
      lines
